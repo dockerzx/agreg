@@ -29,4 +29,4 @@ class FeedAdmin(admin.ModelAdmin):
     list_filter = ("is_active",)
     search_fields = ("title",)
 
-admin.site.register(Category)
+#admin.site.register(Category)
