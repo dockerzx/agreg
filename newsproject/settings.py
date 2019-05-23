@@ -15,7 +15,7 @@ import os
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-DJANGO_MODE = 'local'#os.getenv('DJANGO_MODE', "Production").lower()
+DJANGO_MODE = 'staging'#os.getenv('DJANGO_MODE', "Production").lower()
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.9/howto/deployment/checklist/
@@ -109,8 +109,8 @@ elif DJANGO_MODE == 'staging':
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.postgresql_psycopg2',
-            'NAME': os.getenv('lol'),
-            'USER': os.getenv('docker'),
+            'NAME': os.getenv('fordj'),
+            'USER': os.getenv('root'),
             'PASSWORD': os.getenv(''),
             'HOST': os.getenv('DATABASE_HOST', '127.0.0.1'),
             'PORT': os.getenv('DATABASE_PORT', '5432'),
