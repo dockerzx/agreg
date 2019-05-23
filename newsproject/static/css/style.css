@@ -1,0 +1,353 @@
+/* ========================================================================
+   Component: layout
+ ========================================================================== */
+body,
+.wrapper > section {
+  background-color: #f5f7fa;
+}
+.wrapper > .aside {
+  background-color: #3a3f51;
+}
+/* ========================================================================
+   Component: top-navbar
+ ========================================================================== */
+.topnavbar {
+  background-color: #fff;
+}
+.topnavbar .navbar-header {
+  background-color: transparent;
+  background-image: -webkit-linear-gradient(left, #564aa3 0%, #7266ba 100%);
+  background-image: -o-linear-gradient(left, #564aa3 0%, #7266ba 100%);
+  background-image: linear-gradient(to right, #564aa3 0%, #7266ba 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff564aa3', endColorstr='#ff7266ba', GradientType=1);
+}
+@media only screen and (min-width: 768px) {
+  .topnavbar .navbar-header {
+    background-image: none;
+  }
+}
+.topnavbar .navbar-nav > li > small,
+.topnavbar .navbar-nav > li > span {
+	display: inline-block;
+	position: relative;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	line-height: 20px;
+}
+.topnavbar .navbar-nav > li > a,
+.topnavbar .navbar-nav > .open > a {
+  color: #564aa3;
+}
+.topnavbar .navbar-nav > li > a:hover,
+.topnavbar .navbar-nav > .open > a:hover,
+.topnavbar .navbar-nav > li > a:focus,
+.topnavbar .navbar-nav > .open > a:focus {
+  color: #312a5d;
+}
+.topnavbar .navbar-right .navbar-nav > li > a,
+.topnavbar .navbar-right .navbar-nav > li > a:hover,
+.topnavbar .navbar-right .navbar-nav > li > a:focus,
+.topnavbar .navbar-nav > .active > a,
+.topnavbar .navbar-nav > .open > a,
+.topnavbar .navbar-nav > .active > a:hover,
+.topnavbar .navbar-nav > .open > a:hover,
+.topnavbar .navbar-nav > .active > a:focus,
+.topnavbar .navbar-nav > .open > a:focus {
+  background-color: transparent;
+}
+.topnavbar .nav-wrapper {
+  background-color: #564aa3;
+  background-image: -webkit-linear-gradient(left, #564aa3 0%, #7266ba 100%);
+  background-image: -o-linear-gradient(left, #564aa3 0%, #7266ba 100%);
+  background-image: linear-gradient(to right, #564aa3 0%, #7266ba 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff564aa3', endColorstr='#ff7266ba', GradientType=1);
+}
+@media only screen and (min-width: 768px) {
+  .topnavbar {
+    background-color: #564aa3;
+    background-image: -webkit-linear-gradient(left, #564aa3 0%, #7266ba 100%);
+    background-image: -o-linear-gradient(left, #564aa3 0%, #7266ba 100%);
+    background-image: linear-gradient(to right, #564aa3 0%, #7266ba 100%);
+    background-repeat: repeat-x;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff564aa3', endColorstr='#ff7266ba', GradientType=1);
+  }
+  .topnavbar .navbar-nav > li > small,
+  .topnavbar .navbar-nav > li > span {
+	color: #ffffff;
+  	padding-top: 15px;
+  	padding-bottom: 15px;
+  }
+  .topnavbar .navbar-nav > .open > a,
+  .topnavbar .navbar-nav > .open > a:hover,
+  .topnavbar .navbar-nav > .open > a:focus {
+    box-shadow: 0 -3px 0 rgba(255, 255, 255, 0.5) inset;
+  }
+  .topnavbar .navbar-nav > li > a,
+  .topnavbar .navbar-nav > .open > a {
+    color: #ffffff;
+  }
+  .topnavbar .navbar-nav > li > a:hover,
+  .topnavbar .navbar-nav > .open > a:hover,
+  .topnavbar .navbar-nav > li > a:focus,
+  .topnavbar .navbar-nav > .open > a:focus {
+    color: #312a5d;
+  }
+  .topnavbar .navbar-nav.navbar-right > li > a,
+  .topnavbar .navbar-nav.navbar-right > li > a:hover,
+  .topnavbar .navbar-nav.navbar-right > li > a:focus {
+    background-color: transparent;
+  }
+}
+/* ========================================================================
+   Component: sidebar
+ ========================================================================== */
+.sidebar {
+  background-color: #3a3f51;
+}
+.sidebar .nav-heading {
+  color: #919da8;
+}
+.sidebar .nav > li > a,
+.sidebar .nav > li > .nav-item {
+  color: #e1e2e3;
+}
+.sidebar .nav > li > a:focus,
+.sidebar .nav > li > .nav-item:focus,
+.sidebar .nav > li > a:hover,
+.sidebar .nav > li > .nav-item:hover {
+  color: #9289ca;
+  background-color: transparent;
+}
+.sidebar .nav > li > a > em,
+.sidebar .nav > li > .nav-item > em {
+  color: inherits;
+}
+.sidebar .nav > li.active,
+.sidebar .nav > li.open,
+.sidebar .nav > li.active > a,
+.sidebar .nav > li.open > a,
+.sidebar .nav > li.active .nav,
+.sidebar .nav > li.open .nav {
+  background-color: #383d4e;
+  color: #9289ca;
+}
+.sidebar .nav > li.active > a > em,
+.sidebar .nav > li.open > a > em {
+  color: #9289ca;
+}
+.sidebar .nav > li.active {
+  border-left-color: #9289ca;
+}
+.sidebar-subnav {
+  background-color: #3a3f51;
+}
+.sidebar-subnav > .sidebar-subnav-header {
+  color: #e1e2e3;
+}
+.sidebar-subnav > li > a,
+.sidebar-subnav > li > .nav-item {
+  color: #e1e2e3;
+}
+.sidebar-subnav > li > a:focus,
+.sidebar-subnav > li > .nav-item:focus,
+.sidebar-subnav > li > a:hover,
+.sidebar-subnav > li > .nav-item:hover {
+  color: #9289ca;
+}
+.sidebar-subnav > li.active > a,
+.sidebar-subnav > li.active > .nav-item {
+  color: #9289ca;
+}
+.sidebar-subnav > li.active > a:after,
+.sidebar-subnav > li.active > .nav-item:after {
+  border-color: #9289ca;
+  background-color: #9289ca;
+}
+/* ========================================================================
+   Component: offsidebar
+ ========================================================================== */
+.offsidebar {
+  border-left: 1px solid #cccccc;
+  background-color: #ffffff;
+  color: #515253;
+}
+/* ========================================================================
+   Component: buttons and pagination
+ ========================================================================== */
+.pager li>a, .pager li>span {
+  border-radius: 3px;
+}
+.pagination>li>a, .pagination>li>span {
+  color: #564aa3;
+}
+.pagination>.active>a, .pagination>.active>a:focus,
+.pagination>.active>a:hover, .pagination>.active>span,
+.pagination>.active>span:focus, .pagination>.active>span:hover {
+  background-color: #564aa3;
+  border-color: #564aa3;
+}
+@media only screen and (min-width: 768px) {
+  #pagination-wrapper {
+	padding-left: 220px;
+  }
+}
+.btn-primary, .btn-primary:active,
+.btn-primary:hover, .btn-primary:focus {
+  background-color: #564aa3;
+}
+/* ========================================================================
+   Component: panel images
+ ========================================================================== */
+.panel-body img {
+  max-width: 100%;
+  height: auto;
+}
+/* ========================================================================
+   Component: Spinkit cutomization
+ ========================================================================== */
+.sk-cube-grid .sk-cube {
+  background-color: #564aa3;
+}
+/* ========================================================================
+   Component: DataTables cutomization
+ ========================================================================== */
+@media only screen and (max-width: 480px) {
+  .dataTables_wrapper .dataTables_length,
+  .dataTables_wrapper .dataTables_filter {
+	padding-top: 10px;
+  }
+  .dataTables_wrapper .dataTables_length,
+  .dataTables_wrapper .dataTables_info {
+	margin-right: -15px !important;
+  }
+  .dataTables_wrapper .dataTables_filter,
+  .dataTables_wrapper .dataTables_paginate {
+	margin-left: -15px !important;
+  }
+  .dataTables_wrapper .dataTables_info,
+  .dataTables_wrapper .dataTables_paginate {
+	padding-bottom: 10px;
+  }
+}
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  .dataTables_wrapper .dataTables_length,
+  .dataTables_wrapper .dataTables_filter {
+	padding-top: 10px;
+  }
+  .dataTables_wrapper .dataTables_length,
+  .dataTables_wrapper .dataTables_info {
+	padding-left: 10px;
+	text-align: left !important;
+	float: left;
+  }
+  .dataTables_wrapper .dataTables_filter,
+  .dataTables_wrapper .dataTables_paginate {
+	padding-right: 10px;
+	text-align: right !important;
+	float: right;
+  }
+}
+/* ========================================================================
+   Component: Back to Top button
+ ========================================================================== */
+a.back-to-top {
+  display: none;
+  width: 50px;
+  height: 50px;
+  text-indent: -9999px;
+  position: fixed;
+  z-index: 999;
+  left: 20px;
+  bottom: 20px;
+  background: #303443 url('/static/img/up-arrow.png') no-repeat center 43%;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+
+/* ========================================================================
+   Component: Lists card
+ ========================================================================== */
+
+.lists #description-wrapper{
+  display: none;
+}
+.lists .panel-body{
+  background-color: unset;
+  padding-top: 0px;
+  padding-bottom: 3px;
+}
+.lists .bg-purple{
+  display: flex;
+}
+.lists .bg-purple span{
+  margin-top: auto;
+  padding-right: 10px;
+}
+.clearfix{
+  padding-left: 26px;
+}
+
+.lists .panel-body h3{
+  color: black;
+  font-size: 18px;
+  margin: 0!important;
+  font-weight: unset;
+}
+.lists .panel-body h3 a{
+  text-decoration: none;
+  color: black;
+}
+/* .lists .panel-body h3::before{
+  content: url("https://inform-ua.info/favicon.ico");
+  padding-right: 5px;
+} */
+
+.lists .panel-body h3 a:hover{
+  text-decoration: none;
+  color: #3a20c5;
+  transition: 0.5s;
+}
+.lists .panel-body.bg-purple{
+  padding-bottom: 3px;
+  padding-top: 15px;
+}
+.lists .col-masonry{
+  margin-bottom: 0px;
+}
+.lists .col-masonry .panel{
+  margin-bottom: 4px;
+}
+.lists .panel:hover{
+  background-color: #d5e1ec;
+}
+.lists .pull-right{
+  display: none;
+}
+
+/* ========================================================================
+   Component: Lists card
+ ========================================================================== */
+
+.grids .bg-purple{
+  display: flex;
+  background-color: #002bff26;
+}
+.grids .bg-purple h3 a{
+  color: black;
+  font-size: 20px;
+  font-weight: normal;
+  text-decoration: none;
+}
+.grids .panel{
+  border: 0px solid transparent;
+  box-shadow: 0px 0px 0px grey;
+  -webkit-transition:  box-shadow .4s ease-out;
+     box-shadow: 0px 0px 5px grey;
+}
+.grids .panel:hover{
+     box-shadow: 1px 8px 20px grey;
+    -webkit-transition:  box-shadow .4s ease-in;
+  }
