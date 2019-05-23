@@ -97,10 +97,10 @@ if DJANGO_MODE == 'local':
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.postgresql_psycopg2',
-            'NAME': os.getenv('DATABASE_NAME'),
-            'USER': os.getenv('DATABASE_USER'),
-            'PASSWORD': os.getenv('DATABASE_PASSWORD'),
-            'HOST': '',
+            'NAME': 'djangoapp',
+            'USER': 'djangoapp_user',
+            'PASSWORD': '12345678',
+            'HOST': 'localhost',
             'PORT': '',
         }
     }
