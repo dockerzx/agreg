@@ -29,7 +29,7 @@ if DJANGO_MODE == 'local':
 else:
     DEBUG = False
 
-ALLOWED_HOSTS = '127.0.0.1'#os.getenv('ALLOWED_HOSTS').split(',')
+ALLOWED_HOSTS = '127.0.0.1','77.83.173.84'#os.getenv('ALLOWED_HOSTS').split(',')
 
 # Application definition
 
@@ -44,11 +44,11 @@ INSTALLED_APPS = [
     'corsheaders',
     'news',
 ]
-
-if DJANGO_MODE == 'local':
-    INSTALLED_APPS += (
-        'debug_toolbar',
-    )
+#
+# if DJANGO_MODE == 'local':
+#     INSTALLED_APPS += (
+#         'debug_toolbar',
+#     )
 
 MIDDLEWARE_CLASSES = [
     'django.middleware.security.SecurityMiddleware',
