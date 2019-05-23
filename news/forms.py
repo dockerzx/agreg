@@ -1,5 +1,5 @@
 from django import forms
-from .models import Feed, Category
+from .models import Feed#, Category
 
 class FeedForm(forms.ModelForm):
     class Meta:
@@ -11,5 +11,5 @@ class FeedForm(forms.ModelForm):
         }
         widgets = {
             'url': forms.URLInput(attrs={'class': 'form-control'}),
-            'category': forms.Select(choices=Category.objects.all())
+            #'category': forms.Select(choices=Category.objects.all())
         }
