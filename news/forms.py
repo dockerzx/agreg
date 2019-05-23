@@ -4,7 +4,7 @@ from .models import Feed#, Category
 class FeedForm(forms.ModelForm):
     class Meta:
         model = Feed
-        fields = ['url', 'category']
+        fields = ['url']#, 'category']
         labels = {
             'url': 'RSS/Atom URL',
             'category': 'Категория'
