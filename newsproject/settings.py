@@ -109,11 +109,11 @@ elif DJANGO_MODE == 'staging':
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.postgresql_psycopg2',
-            'NAME': os.getenv('fordj'),
-            'USER': os.getenv('root'),
-            'PASSWORD': os.getenv(''),
-            'HOST': os.getenv('DATABASE_HOST', '127.0.0.1'),
-            'PORT': os.getenv('DATABASE_PORT', '5432'),
+            'NAME': 'djangoapp',
+            'USER': 'djangoapp_user',
+            'PASSWORD': '12345678',
+            'HOST': 'localhost',
+            'PORT': '',
         }
     }
 
