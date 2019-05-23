@@ -1,7 +1,7 @@
 from django.template.defaultfilters import escape
 from django.core.urlresolvers import reverse
 from django.contrib import admin
-from .models import Feed, Article, Category
+from .models import Feed, Article#, Category
 
 # Register your models here.
 @admin.register(Article)
