@@ -6,16 +6,16 @@ import ssl
 from news.lib import modules
 
 # Create your models here.
-# class Category(models.Model):
-#     title = models.CharField(max_length=200)
-#
-#     def __str__(self):
-#         return self.title
+class Category(models.Model):
+    title = models.CharField(max_length=200)
+
+    def __str__(self):
+        return self.title
 
 class Feed(models.Model):
     title = models.CharField(max_length=200)
     url = models.URLField(unique=True, help_text="Don't forget to add http:// or https:// to the URL")
-    #category = models.ForeignKey(Category, on_delete=models.CASCADE, blank=True, null=True)
+    category = models.ForeignKey(Category, on_delete=models.CASCADE, blank=True, null=True)
     is_active = models.BooleanField(default=True)
     favicon = models.URLField(blank=True, null=True)
 
