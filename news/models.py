@@ -15,7 +15,7 @@ class Category(models.Model):
 class Feed(models.Model):
     title = models.CharField(max_length=200)
     url = models.URLField(unique=True, help_text="Don't forget to add http:// or https:// to the URL")
-    category = models.ForeignKey(Category, on_delete=models.CASCADE, blank=True, null=True)
+    category =  models.CharField(max_length=200)#models.ForeignKey(Category, on_delete=models.CASCADE, blank=True, null=True)
     is_active = models.BooleanField(default=True)
     favicon = models.URLField(blank=True, null=True)
 
