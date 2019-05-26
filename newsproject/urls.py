@@ -15,28 +15,28 @@ Including another URLconf
 """
 from django.conf.urls import include, url
 from django.contrib import admin
-from django.contrib.auth.decorators import login_required
-from django.contrib.auth import views as auth_views
-from rest_framework.urlpatterns import format_suffix_patterns
-from news.api import ArticlesList
-from news.views import articles_list
+# from django.contrib.auth.decorators import login_required
+# from django.contrib.auth import views as auth_views
+# from rest_framework.urlpatterns import format_suffix_patterns
+# from news.api import ArticlesList
+# from news.views import articles_list
 
 urlpatterns = [
     # Auth URLs
-    url(r'^logout/$', auth_views.logout, {'next_page': 'articles-list'}, name='logout'),
-    url(r'^login/$', auth_views.login, {'template_name': 'login.html'}, name='login'),
-    
-    # Admin URLs
-    url(r'^admin/', admin.site.urls),
-    
-    # Custom URLs
-    url(r'^$', articles_list, name='articles-list'),
-    url(r'^news/', include('news.urls')),
-    
-    # REST API URLs
-    url(r'^api/$', ArticlesList.as_view()),
-    url(r'^api/news/articles/$', ArticlesList.as_view()),
-    url(r'^api/news/feeds/(?P<feed_id>[0-9]+)/$', ArticlesList.as_view()),
+    # url(r'^logout/$', auth_views.logout, {'next_page': 'articles-list'}, name='logout'),
+    # url(r'^login/$', auth_views.login, {'template_name': 'login.html'}, name='login'),
+    #
+    # # Admin URLs
+    # url(r'^admin/', admin.site.urls),
+    #
+    # # Custom URLs
+    # url(r'^$', articles_list, name='articles-list'),
+    # url(r'^news/', include('news.urls')),
+    #
+    # # REST API URLs
+    # url(r'^api/$', ArticlesList.as_view()),
+    # url(r'^api/news/articles/$', ArticlesList.as_view()),
+    # url(r'^api/news/feeds/(?P<feed_id>[0-9]+)/$', ArticlesList.as_view()),
 ]
 
-urlpatterns = format_suffix_patterns(urlpatterns)
+# urlpatterns = format_suffix_patterns(urlpatterns)
