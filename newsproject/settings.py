@@ -29,7 +29,7 @@ if DJANGO_MODE == 'local':
 else:
     DEBUG = False
 
-ALLOWED_HOSTS = '127.0.0.1','77.83.173.84','vm633388.had.su', 'ukrnet.club:'#os.getenv('ALLOWED_HOSTS').split(',')
+ALLOWED_HOSTS = '127.0.0.1','77.83.173.84','vm633388.had.su', 'ukrnet.club'#os.getenv('ALLOWED_HOSTS').split(',')
 
 # Application definition
 
