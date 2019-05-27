@@ -24,11 +24,12 @@ DJANGO_MODE = 'staging'#os.getenv('DJANGO_MODE', "Production").lower()
 SECRET_KEY = 'asdasmkfmkem'#os.getenv('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-if DJANGO_MODE == 'local':
-    DEBUG = True
-else:
-    DEBUG = False
+# if DJANGO_MODE == 'local':
+#     DEBUG = True
+# else:
+#     DEBUG = False
 
+DEBUG = False
 ALLOWED_HOSTS = '127.0.0.1','77.83.173.84','vm633388.had.su', 'ukrnet.club'#os.getenv('ALLOWED_HOSTS').split(',')
 
 # Application definition
