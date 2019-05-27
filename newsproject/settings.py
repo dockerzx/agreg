@@ -239,9 +239,9 @@ if DJANGO_MODE == 'production':
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
 
-STATIC_URL = '/staticfiles/'
-STATIC_ROOT = 'staticfiles'#'staticfiles'
+STATIC_URL = '/static/'
+STATIC_ROOT = '/static/'#'staticfiles'
 
 STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'staticfiles'),
+    os.path.join(BASE_DIR, 'newsproject/static'),
 )
