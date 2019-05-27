@@ -243,5 +243,5 @@ STATIC_URL = '/staticfiles/'
 STATIC_ROOT = 'staticfiles'#'staticfiles'
 
 STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'newsproject/staticfiles'),
+    os.path.join(BASE_DIR, 'staticfiles'),
 )
