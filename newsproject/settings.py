@@ -29,7 +29,7 @@ if DJANGO_MODE == 'local':
 else:
     DEBUG = False
 
-ALLOWED_HOSTS = '127.0.0.1','77.83.173.84','vm633388.had.su'#os.getenv('ALLOWED_HOSTS').split(',')
+ALLOWED_HOSTS = '127.0.0.1','77.83.173.84','vm633388.had.su', 'ukrnet.club:'#os.getenv('ALLOWED_HOSTS').split(',')
 
 # Application definition
 
@@ -240,7 +240,7 @@ if DJANGO_MODE == 'production':
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT = '/staticfiles/'#'staticfiles'
+STATIC_ROOT = '/static/'#'staticfiles'
 
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'newsproject/static'),
