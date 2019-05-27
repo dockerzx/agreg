@@ -15,7 +15,7 @@ import os
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-DJANGO_MODE = 'staging'#os.getenv('DJANGO_MODE', "Production").lower()
+DJANGO_MODE = 'production'#os.getenv('DJANGO_MODE', "Production").lower()
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.9/howto/deployment/checklist/
@@ -106,7 +106,7 @@ if DJANGO_MODE == 'local':
         }
     }
 
-elif DJANGO_MODE == 'staging':
+elif DJANGO_MODE == 'production':
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.postgresql_psycopg2',
@@ -118,10 +118,10 @@ elif DJANGO_MODE == 'staging':
         }
     }
 
-elif DJANGO_MODE == 'production':
-    import dj_database_url
-    # Handles DATABASE_URL environment variable
-    DATABASES = {'default': dj_database_url.config()}
+# elif DJANGO_MODE == 'production':
+#     import dj_database_url
+#     # Handles DATABASE_URL environment variable
+#     DATABASES = {'default': dj_database_url.config()}
 
 # Password validation
 # https://docs.djangoproject.com/en/1.9/ref/settings/#auth-password-validators
@@ -185,13 +185,13 @@ CORS_ORIGIN_ALLOW_ALL = True
 #     CELERY_RESULT_SERIALIZER = 'json'
 #     CELERY_TIMEZONE = 'America/Chicago'
 #
-# if DJANGO_MODE == 'production':
-#     BROKER_URL = os.getenv('REDIS_URL')
-#     CELERY_RESULT_BACKEND = os.getenv('REDIS_URL')
-#     CELERY_ACCEPT_CONTENT = ['application/json']
-#     CELERY_TASK_SERIALIZER = 'json'
-#     CELERY_RESULT_SERIALIZER = 'json'
-#     CELERY_TIMEZONE = 'America/Chicago'
+if DJANGO_MODE == 'production':
+    BROKER_URL = os.getenv('REDIS_URL')
+    CELERY_RESULT_BACKEND = os.getenv('REDIS_URL')
+    CELERY_ACCEPT_CONTENT = ['application/json']
+    CELERY_TASK_SERIALIZER = 'json'
+    CELERY_RESULT_SERIALIZER = 'json'
+    CELERY_TIMEZONE = 'America/Chicago'
 
 # LOGGING
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#logging
@@ -228,6 +228,7 @@ LOGGING = {
 # Admins
 ADMINS = (
     ('James Black', 'mrdesigner@jamesblackjr.com'),
+    ('admin', '')
 )
 
 EMAIL_HOST = 'localhost'
