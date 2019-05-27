@@ -13,4 +13,5 @@ def get_fi_link(url):
     for icon in icons:
         if icon.format == 'ico':
             icon_link=icon.url
+        else icon_link=icon.url
     return (icon_link)
