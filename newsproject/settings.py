@@ -29,7 +29,7 @@ SECRET_KEY = 'asdasmkfmkem'#os.getenv('SECRET_KEY')
 # else:
 #     DEBUG = False
 
-DEBUG = False
+DEBUG = True
 ALLOWED_HOSTS = '127.0.0.1','77.83.173.84','vm633388.had.su', 'ukrnet.club'#os.getenv('ALLOWED_HOSTS').split(',')
 
 # Application definition
