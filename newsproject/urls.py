@@ -15,11 +15,11 @@ Including another URLconf
 """
 from django.conf.urls import include, url
 from django.contrib import admin
-from django.contrib.auth.decorators import login_required
-from django.contrib.auth import views as auth_views
-from rest_framework.urlpatterns import format_suffix_patterns
-from news.api import ArticlesList
-from news.views import articles_list
+# from django.contrib.auth.decorators import login_required
+# from django.contrib.auth import views as auth_views
+# from rest_framework.urlpatterns import format_suffix_patterns
+# from news.api import ArticlesList
+# from news.views import articles_list
 
 urlpatterns = [
     # Auth URLs
