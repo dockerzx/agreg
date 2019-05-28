@@ -37,7 +37,7 @@ class Feed(models.Model):
             else:
                 self.title = "Undefined"
 
-        #self.favicon = modules.get_fi_link(self.url)
+        self.favicon = modules.get_fi_link(self.url)
 
         super(Feed, self).save(*args, **kwargs)
 
