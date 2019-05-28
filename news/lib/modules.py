@@ -10,9 +10,8 @@ def get_fi_link(url):
     parsed_uri = urlparse(url)
     host = '{uri.scheme}://{uri.netloc}/'.format(uri=parsed_uri)
     icons = favicon.get(host)
+    icon_link = "https://www.google.com/s2/favicons?domain=ukrnet.club"
     for icon in icons:
         if icon.format == 'ico':
-            icon_link=icon.url
-        else:
             icon_link=icon.url
     return (icon_link)
