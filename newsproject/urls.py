@@ -23,20 +23,20 @@ from news.views import articles_list
 
 urlpatterns = [
     #Auth URLs
-    url(r'^logout/$', auth_views.logout, {'next_page': 'articles-list'}, name='logout'),
-    url(r'^login/$', auth_views.login, {'template_name': 'login.html'}, name='login'),
-    #
-    # # Admin URLs
-    url(r'^admin/', admin.site.urls),
-    #
-    # # Custom URLs
-    url(r'^$', articles_list, name='articles-list'),
-    url(r'^news/', include('news.urls')),
-    #
-    # # REST API URLs
-    url(r'^api/$', ArticlesList.as_view()),
-    url(r'^api/news/articles/$', ArticlesList.as_view()),
-    url(r'^api/news/feeds/(?P<feed_id>[0-9]+)/$', ArticlesList.as_view()),
+    # url(r'^logout/$', auth_views.logout, {'next_page': 'articles-list'}, name='logout'),
+    # url(r'^login/$', auth_views.login, {'template_name': 'login.html'}, name='login'),
+    # #
+    # # # Admin URLs
+    # url(r'^admin/', admin.site.urls),
+    # #
+    # # # Custom URLs
+    # url(r'^$', articles_list, name='articles-list'),
+    # url(r'^news/', include('news.urls')),
+    # #
+    # # # REST API URLs
+    # url(r'^api/$', ArticlesList.as_view()),
+    # url(r'^api/news/articles/$', ArticlesList.as_view()),
+    # url(r'^api/news/feeds/(?P<feed_id>[0-9]+)/$', ArticlesList.as_view()),
 ]
 
 urlpatterns = format_suffix_patterns(urlpatterns)
