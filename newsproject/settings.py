@@ -110,8 +110,8 @@ elif DJANGO_MODE == 'production':
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.postgresql_psycopg2',
-            'NAME': 'djangoapp',
-            'USER': 'djangoapp_user',
+            'NAME': 'agreg_django_db',
+            'USER': 'agreg_admin',
             'PASSWORD': '12345678',
             'HOST': 'localhost',
             'PORT': '',
