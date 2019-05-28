@@ -314,6 +314,10 @@ a.back-to-top {
   padding-bottom: 3px;
   padding-top: 15px;
 }
+.lists .panel-body.bg-purple .favicon img{
+  width: 15px;
+}
+
 .lists .col-masonry{
   margin-bottom: 0px;
 }
