@@ -316,6 +316,7 @@ a.back-to-top {
 }
 .lists .panel-body.bg-purple .favicon img{
   min-width: 15px;
+  max-width: 15px;
 }
 
 .lists .col-masonry{
