@@ -315,7 +315,7 @@ a.back-to-top {
   padding-top: 15px;
 }
 .lists .panel-body.bg-purple .favicon img{
-  width: 15px;
+  min-width: 15px;
 }
 
 .lists .col-masonry{
@@ -355,3 +355,7 @@ a.back-to-top {
      box-shadow: 1px 8px 20px grey;
     -webkit-transition:  box-shadow .4s ease-in;
   }
+.grids .panel-body.bg-purple .favicon img{
+  min-width: 15px;
+  max-width: 15px;
+}
