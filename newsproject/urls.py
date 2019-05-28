@@ -22,7 +22,7 @@ from news.api import ArticlesList
 from news.views import articles_list
 
 urlpatterns = [
-    Auth URLs
+    #Auth URLs
     url(r'^logout/$', auth_views.logout, {'next_page': 'articles-list'}, name='logout'),
     url(r'^login/$', auth_views.login, {'template_name': 'login.html'}, name='login'),
     #
