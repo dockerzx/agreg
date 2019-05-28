@@ -13,7 +13,7 @@ class Category(models.Model):
         return self.title
 
 class Feed(models.Model):
-    title = models.CharField(max_length=200)
+    title = models.CharField(max_length=500)
     url = models.URLField(unique=True, help_text="Don't forget to add http:// or https:// to the URL")
     category =  models.ForeignKey(Category, on_delete=models.CASCADE, blank=True, null=True)
     is_active = models.BooleanField(default=True)
@@ -76,7 +76,7 @@ class Feed(models.Model):
 
 class Article(models.Model):
     feed = models.ForeignKey(Feed)
-    title = models.CharField(max_length=200)
+    title = models.CharField(max_length=500)
     url = models.URLField(verbose_name="URL")
     description = models.TextField()
     description_truncated = models.TextField(blank=True, null=True)
