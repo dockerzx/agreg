@@ -94,17 +94,17 @@ WSGI_APPLICATION = 'newsproject.wsgi.application'
 #     }
 # }
 
-# if DJANGO_MODE == 'local':
-#     DATABASES = {
-#         'default': {
-#             'ENGINE': 'django.db.backends.postgresql_psycopg2',
-#             'NAME': 'docker',
-#             'USER': 'docker',
-#             'PASSWORD': '',
-#             'HOST': 'localhost',
-#             'PORT': '5432',
-#         }
-#     }
+if DJANGO_MODE == 'local':
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.postgresql_psycopg2',
+            'NAME': 'docker',
+            'USER': 'docker',
+            'PASSWORD': '',
+            'HOST': 'localhost',
+            'PORT': '5432',
+        }
+    }
 
 elif DJANGO_MODE == 'production':
     DATABASES = {
