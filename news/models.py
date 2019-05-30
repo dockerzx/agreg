@@ -7,7 +7,7 @@ from news.lib import modules
 
 #Create your models here.
 class Category(models.Model):
-    title = models.CharField(max_length=200, blank=True, null=True)
+    title = models.CharField(max_length=300, blank=True, null=True)
 
     def __str__(self):
         return self.title
@@ -76,7 +76,7 @@ class Feed(models.Model):
 
 class Article(models.Model):
     feed = models.ForeignKey(Feed)
-    title = models.CharField(max_length=500)
+    title = models.CharField()
     url = models.URLField(verbose_name="URL")
     description = models.TextField()
     description_truncated = models.TextField(blank=True, null=True)
