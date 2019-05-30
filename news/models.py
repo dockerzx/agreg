@@ -76,7 +76,7 @@ class Feed(models.Model):
 
 class Article(models.Model):
     feed = models.ForeignKey(Feed)
-    title = models.CharField()
+    title = models.CharField(max_length=255)
     url = models.URLField(verbose_name="URL")
     description = models.TextField()
     description_truncated = models.TextField(blank=True, null=True)
