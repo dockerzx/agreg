@@ -15,7 +15,7 @@ import os
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-DJANGO_MODE = 'production'#os.getenv('DJANGO_MODE', "Production").lower()
+DJANGO_MODE = 'local'#os.getenv('DJANGO_MODE', "Production").lower()
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.9/howto/deployment/checklist/
@@ -35,6 +35,7 @@ ALLOWED_HOSTS = '127.0.0.1','77.83.173.84','vm633388.had.su', 'ukrnet.club'#os.g
 # Application definition
 
 INSTALLED_APPS = [
+    'social_widgets',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -72,6 +73,7 @@ TEMPLATES = [
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
+                'django.core.context_processors.request',
                 'django.template.context_processors.debug',
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
@@ -151,9 +153,12 @@ TIME_ZONE = 'America/Chicago'
 
 USE_I18N = True
 
-USE_L10N = True
+USE_L10N = False
 
 USE_TZ = False
+
+DATETIME_FORMAT = 'y.m.d H:i'
+DATE_FORMAT = 'y-m'
 
 # Set Login URL
 LOGIN_URL = '/login/'

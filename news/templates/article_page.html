@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
+{% load social_widgets %}
 {% block sidebar %}
 	<!-- Articles Sidebar -->
     <aside class="aside">
@@ -69,6 +70,8 @@
           <span class='favicon'><img src='{{ article.favicon }}'></span>
           <h3>{{ article.title }}</h1>
           <p>{{ article.description }}</p>
+          <p>{{ article.publication_date }}, {{ article.feed }}, {% social_widget_render "facebook/share_button.html" href="developers.facebook.com" %}, {% social_widget_render "twitter/share_button.html" %}
+</p>
           <p><a class="btn btn-primary btn-lg" href="{{ article.url }}" role="button">Читать далее...</a></p>
         </div>
       </div>

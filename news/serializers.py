@@ -7,5 +7,5 @@ class ArticleSerializer(serializers.Serializer):
     title = serializers.CharField(max_length=200)
     url = serializers.URLField()
     description = serializers.CharField(source='description_truncated')
-    publication_date = serializers.DateTimeField(format='%A %B %d, %Y %-I:%M %p')
+    publication_date = serializers.DateTimeField(format='%H:%M, %d.%m.%y')
     favicon = serializers.URLField()

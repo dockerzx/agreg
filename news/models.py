@@ -56,6 +56,8 @@ class Feed(models.Model):
             article.url = entry.link
             article.description = entry.description
             article.description_truncated = truncatewords_html(entry.description, 150)
+            # article.featured_image = entry.enclosure.url
+            # print(entry.enclosure.url)
 
             # Set publication date
             try:
@@ -82,6 +84,7 @@ class Article(models.Model):
     description_truncated = models.TextField(blank=True, null=True)
     publication_date = models.DateTimeField()
     favicon = models.URLField(blank=True, null=True)
+    #featured_image = models.URLField(blank=True, null=True)
 
     def __str__(self):
         return self.title

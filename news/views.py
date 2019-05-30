@@ -8,8 +8,9 @@ from .forms import FeedForm
 
 def article_page(request, art_id=None):
     article = Article.objects.get(pk=art_id)
+    article.description = article.description.replace("<![CDATA[","")
+    article.description = article.description.replace("]]>","")
     categorys = Category.objects.all()
-    print(article.title)
     form = FeedForm
     feed = None
     context = {
