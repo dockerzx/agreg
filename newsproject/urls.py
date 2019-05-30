@@ -36,6 +36,7 @@ urlpatterns = [
     # # REST API URLs
     url(r'^api/$', ArticlesList.as_view()),
     url(r'^api/news/articles/$', ArticlesList.as_view()),
+    url(r'^api/news/articles/(?P<art_id>[0-9]+)/$', ArticlesList.as_view()),
     url(r'^api/news/feeds/(?P<feed_id>[0-9]+)/$', ArticlesList.as_view()),
 ]
 

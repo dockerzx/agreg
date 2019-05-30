@@ -7,4 +7,5 @@ urlpatterns = [
     url(r'^feeds/new/$', views.new_feed, name='new-feed'),
     url(r'^feeds/(?P<feed_id>[0-9]+)/$', views.articles_list, name='feed-articles'),
     url(r'^feeds/$', views.feeds_list, name='feeds-list'),
+    url(r'^articles/(?P<art_id>[0-9]+)/$', views.article_page, name='article-page'),
 ]

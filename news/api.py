@@ -8,7 +8,7 @@ from .serializers import ArticleSerializer
 class ArticlesList(generics.ListAPIView):
     serializer_class = ArticleSerializer
 
-    def list(self, request, feed_id=None):
+    def list(self, request, feed_id=None, art_id=None):
         queryset = self.get_queryset()
         page = self.paginate_queryset(queryset)
 

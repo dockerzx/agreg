@@ -1,10 +1,25 @@
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import redirect, render
 from rest_framework import generics, status
-from .models import Feed, Category
+from .models import Feed, Category, Article
 from .forms import FeedForm
 
 #Create your views here.
+
+def article_page(request, art_id=None):
+    article = Article.objects.get(pk=art_id)
+    categorys = Category.objects.all()
+    print(article.title)
+    form = FeedForm
+    feed = None
+    context = {
+        'article': article,
+        'feed': feed,
+        'form': form,
+        'categorys': categorys
+    }
+    return render(request, "article_page.html", context)
+
 def articles_list(request, feed_id=None):
     if feed_id is not None:
         feed = Feed.objects.get(pk=feed_id)

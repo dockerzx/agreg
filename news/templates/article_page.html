@@ -1,0 +1,139 @@
+{% extends "base.html" %}
+{% load static %}
+{% block sidebar %}
+	<!-- Articles Sidebar -->
+    <aside class="aside">
+       	<div class="aside-inner">
+          	<nav data-sidebar-anyclick-close="" class="sidebar">
+             	<ul class="nav">
+                	<li class="nav-heading">
+                   		<span>Навигация</span>
+                	</li>
+                	<li class="active">
+                   	 	<a href="{% if feed %}{{ request.path }}{% else %}{% url 'articles-list' %}{% endif %}" title="News Articles">
+                      		<em class="icon-grid"></em>
+                      	  	<span>Все новости</span>
+                   	 	</a>
+                	</li>
+					<li>
+						<a href="#nav-cats" title="Feed Settings" data-toggle="collapse" aria-expanded="true">
+							<em class="icon-settings"></em>
+							<span>Категории</span>
+						</a>
+						<ul id="nav-cats" class="nav sidebar-subnav collapse in" aria-expanded="true">
+							<li class="sidebar-subnav-header">Категории</li>
+              {% for cat in categorys %}
+							<li class="{{ cat.id }}">
+								<a href="{{ request.path }}?cat={{ cat.id }}" title="">
+									<span>{{ cat }}</span>
+								</a>
+							</li>
+              {% endfor %}
+							<!-- <li>
+								<a href="{{ request.path }}?days=30" title="Articles from Last 30 Days">
+									<span>Последние 30 дней</span>
+								</a>
+							</li> -->
+
+						</ul>
+					</li>
+             	</ul>
+          	</nav>
+       	</div>
+   	</aside>
+{% endblock %}
+
+{% block content %}
+	<!-- Page Content -->
+	<div class="content-wrapper">
+		<div class="content-heading">
+	    	<div class="pull-right">
+              <span id="masgr">List</span> | <span id="listgr">Grid</span>
+              &nbsp&nbsp
+              {% if user.is_authenticated %}
+              <div class="btn-group">
+	             	<button type="button" data-toggle="modal" data-target="#new-feed-modal" class="btn btn-default">Новая лента</button>
+	          	</div>
+              {% endif %}
+	       	</div>
+			{% if feed %}
+				{{ feed.title }}
+			{% else %}
+	       		Новости
+			{% endif %}
+		</div>
+
+    <div class="list row">
+      <div class="jumbotron">
+        <div class="container">
+          <span class='favicon'><img src='{{ article.favicon }}'></span>
+          <h3>{{ article.title }}</h1>
+          <p>{{ article.description }}</p>
+          <p><a class="btn btn-primary btn-lg" href="{{ article.url }}" role="button">Читать далее...</a></p>
+        </div>
+      </div>
+    </div>
+
+		<div id="loading-wrapper">
+			<div class="sk-cube-grid">
+			  	<div class="sk-cube sk-cube1"></div>
+			  	<div class="sk-cube sk-cube2"></div>
+			  	<div class="sk-cube sk-cube3"></div>
+			  	<div class="sk-cube sk-cube4"></div>
+			  	<div class="sk-cube sk-cube5"></div>
+			  	<div class="sk-cube sk-cube6"></div>
+			  	<div class="sk-cube sk-cube7"></div>
+			  	<div class="sk-cube sk-cube8"></div>
+			  	<div class="sk-cube sk-cube9"></div>
+			</div>
+			<div class="text-center">
+				<p id="loading-message"></p>
+			</div>
+		</div>
+
+
+    <div id="articles-wrapper" class="lists col-md-8">
+			<!-- Insert Articles Here with JavaScript -->
+    <!-- <div class="container">
+      <div class="list row">
+        <div id="articles-wrapper" class="col-md-8">
+
+        </div>
+        <div class="col-md-4">
+          ad?
+        </div>
+      </div>
+    </div> -->
+
+	</div>
+{% endblock %}
+
+{% block footer %}
+	<div id="pagination-wrapper" style="display: none;"></div>
+{% endblock %}
+
+{% block javascript %}
+	<!-- Custom Articles List JavaScript -->
+	<script src="{% static 'js/loading.js' %}"></script>
+	<script src="{% static 'js/pagination.js' %}"></script>
+	<script src="{% static 'js/articles.js' %}"></script>
+  <script type="text/javascript">
+  $(document).ready(function() {
+    $( "#listgr" ).click(function() {
+      $("#articles-wrapper").removeClass("lists col-md-8");
+      $("#articles-wrapper").addClass("row-masonry row-masonry-xl-4 grids");
+    });
+    $( "#masgr" ).click(function() {
+      $("#articles-wrapper").removeClass("row-masonry row-masonry-xl-4 grids");
+      $("#articles-wrapper").addClass("lists col-md-8");
+    });
+  });
+  var url_str = window.location.href;
+  var url = new URL(url_str);
+  var cat = url.searchParams.get("cat");
+  if(cat != null){
+    var element = document.getElementsByClassName(cat);
+    element[0].classList.add("active");
+  }
+  </script>
+{% endblock %}

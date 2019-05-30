@@ -46,8 +46,8 @@ function renderArticles(articles) {
   //   ""
   // }
 	for(var article = 0; article < articles.length; article++) {
-		output += "<div class='col-masonry'><div class='panel'><div class='panel-body bg-purple'><span class='favicon'><img src='"+ articles[article].favicon +"'></span><h3 class='mv-lg'><a href='"+
-    articles[article].url + "'>" + articles[article].title +"</a>"+
+		output += "<div class='col-masonry'><div class='panel'><div class='panel-body bg-purple'><span class='favicon'><img src='"+ articles[article].favicon +"'></span><h3 class='mv-lg'><a href='http://ukrnet.club/news/articles/"+
+    articles[article].pk + "/'>" + articles[article].title +"</a>"+
 		"</h3></div><div class='panel-body'><p id='description-wrapper'>" +
 		articles[article].description +
 		"</p><p class='clearfix'><span class='pull-left'><small class='mr-sm'>" +
