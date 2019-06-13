@@ -27,7 +27,8 @@ def truncate_descriptions_task():
 
         article.save()
 
-@periodic_task(run_every=(crontab(minute=0, hour='*/1')), name="update_all_feed_articles", ignore_result=True)
+#@periodic_task(run_every=(crontab(minute=0, hour='*/1')), name="update_all_feed_articles", ignore_result=True)
+@periodic_task(run_every=(crontab(minute='*/15')), name="update_all_feed_articles", ignore_result=True)
 def update_all_feed_articles_task():
     """ updates articles for all RSS/Atom feeds """
     feeds = Feed.objects.all()
